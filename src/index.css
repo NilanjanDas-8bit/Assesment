@@ -1,0 +1,339 @@
+/* Base styles */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Center the Selection component */
+#selection-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+}
+
+.selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.option img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.option svg {
+  margin-right: 0.5rem;
+}
+
+.option span {
+  margin-left: 0.5rem;
+}
+
+.option:hover {
+  background-color: #ddd;
+}
+
+.selected {
+  background-color: #ddd;
+}
+
+#selected {
+  font-weight: bold;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.selection-container h5 {
+  margin-top: 0.5rem;
+  opacity: 0.6;
+}
+
+.progress-bar-container {
+  width: 80%;
+  max-width: 600px; /* Set a maximum width for the progress bar container */
+  margin: 20px auto; /* Center the progress bar container */
+  border: 1px solid #ccc; /* Add border to create a boundary */
+  border-radius: 5px; /* Add border radius for a rounded appearance */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: #3e8e41;
+  transition: width 0.3s ease;
+}
+
+.selection-container {
+  text-align: center; /* Center the content horizontally */
+}
+.math-comfort-level {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.math-comfort-level h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.math-comfort-level p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.math-comfort-level form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.math-comfort-level label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.math-comfort-level input[type="number"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.math-comfort-level input[readonly] {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+.math-comfort-level button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.math-comfort-level button:hover {
+  background-color: #3e8e41;
+}
+
+.math-comfort-level .message {
+  margin-top: 10px;
+  color: green;
+}
+
+.math-comfort-level .incorrect-message {
+  margin-top: 10px;
+  color: red;
+}
+.options-container-horizontal {
+  text-align: center; /* Align the options to the center */
+}
+
+.option-horizontal {
+  display: inline-flex; /* Use flexbox for layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  margin-right: 10px;
+  overflow: hidden;
+  border: 2px solid #ccc; /* Add border to options */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.option-horizontal img {
+  width: 150px; /* Set the width */
+  height: 150px; /* Set the height */
+  display: block; /* Prevent unwanted space beneath image */
+}
+
+.selected-horizontal {
+  border: 2px solid rgb(86, 86, 86);
+}
+.image-and-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 20px; /* Add margin to create a gap between the image and text */
+}
+
+.text-container {
+  flex: 1; /* Make the text container expand to fill available space */
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.loading-container h2 {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.loading-circle {
+  width: 60px;
+  height: 60px;
+  border: 7px solid #ccc;
+  border-top-color: #ffae00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.m-container-horizontal {
+  text-align: center; /* Align the options to the center */
+}
+
+.m-horizontal {
+  display: inline-flex; /* Use flexbox for layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  margin-right: 10px;
+  overflow: hidden;
+  border: 2px solid #ccc; /* Add border to options */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.m-horizontal img {
+  width: 350px; /* Set the width */
+  height: 150px; /* Set the height */
+  display: block; /* Prevent unwanted space beneath image */
+}
+
+.selected-horizontal {
+  border: 2px solid rgb(86, 86, 86);
+}
+.image-and-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 20px; /* Add margin to create a gap between the image and text */
+}
+
+.text-container {
+  flex: 1; /* Make the text container expand to fill available space */
+}
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 1200px) {
+  .options-container,
+  .option {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .option img {
+    width: 48px; /* Increase image size for smaller screens */
+    height: 48px;
+  }
+
+  .option span {
+    margin-left: 0; /* Remove left margin for text */
+    margin-top: 0.5rem; /* Add top margin for text */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .options-container-horizontal {
+    flex-wrap: wrap; /* Allow options to wrap to the next line */
+    justify-content: center; /* Center options horizontally */
+  }
+
+  .option-horizontal {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add bottom margin for gap between options */
+  }
+
+  .image-and-text-container {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    text-align: center; /* Center text */
+  }
+
+  .image {
+    margin-right: 0; /* Remove right margin for image */
+    margin-bottom: 10px; /* Add bottom margin for gap */
+  }
+
+  .loading-container h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
